@@ -67,16 +67,16 @@ const Services: React.FC = () => {
           isWide
         />
         <ServiceModule
-          title="New Bathrooms"
-          desc="Beautiful bathroom transformations. We handle everything from the initial plumbing to the final tiling and luxury fixtures."
-          tags={['Design', 'Tiling', 'Full Reno']}
-          image="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800"
+          title="Heating Maintenance & Servicing"
+          desc="Regular boiler and heating system maintenance to ensure reliability. Extend the life of your system."
+          tags={['Maintenance', 'Servicing', 'Reliability']}
+          image="https://images.pexels.com/photos/8961157/pexels-photo-8961157.jpeg"
         />
         <ServiceModule
-          title="General Plumbing"
-          desc="No job is too small. We fix leaks, replace taps, repair toilets, and look after your home's water systems with care."
-          tags={['Leaks', 'Taps', 'Repairs']}
-          image="https://images.pexels.com/photos/586019/pexels-photo-586019.jpeg"
+          title="Radiator Installation & Repair"
+          desc="Central heating radiator installation, repair, and maintenance. Keep your home warm and efficient."
+          tags={['Installation', 'Repair', 'Maintenance']}
+          image="https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg"
         />
         <ServiceModule
           title="Heating Solutions"
@@ -86,16 +86,10 @@ const Services: React.FC = () => {
           isWide
         />
         <ServiceModule
-          title="Plumbing Repairs"
-          desc="Professional plumbing repair services for all types of issues. From minor drips to major water damage, we diagnose and fix problems quickly."
-          tags={['Repairs', 'Diagnostics', 'Water Damage']}
-          image="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg"
-        />
-        <ServiceModule
-          title="Leak Detection & Repair"
-          desc="Expert leak detection and repair services to prevent water damage and save on your bills. We find hidden leaks fast."
-          tags={['Detection', 'Repair', 'Prevention']}
-          image="https://images.pexels.com/photos/7195133/pexels-photo-7195133.jpeg"
+          title="New Bathrooms"
+          desc="Beautiful bathroom transformations. We handle everything from the initial plumbing to the final tiling and luxury fixtures."
+          tags={['Design', 'Tiling', 'Full Reno']}
+          image="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800"
           isWide
         />
         <ServiceModule
@@ -111,29 +105,30 @@ const Services: React.FC = () => {
           image="https://images.pexels.com/photos/7031608/pexels-photo-7031608.jpeg"
         />
         <ServiceModule
-          title="Radiator Installation & Repair"
-          desc="Central heating radiator installation, repair, and maintenance. Keep your home warm and efficient."
-          tags={['Installation', 'Repair', 'Maintenance']}
-          image="https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg"
+          title="Leak Detection & Repair"
+          desc="Expert leak detection and repair services to prevent water damage and save on your bills. We find hidden leaks fast."
+          tags={['Detection', 'Repair', 'Prevention']}
+          image="https://images.pexels.com/photos/7195133/pexels-photo-7195133.jpeg"
           isWide
         />
         <ServiceModule
-          title="Heating Maintenance & Servicing"
-          desc="Regular boiler and heating system maintenance to ensure reliability. Extend the life of your system."
-          tags={['Maintenance', 'Servicing', 'Reliability']}
-          image="https://images.pexels.com/photos/8961157/pexels-photo-8961157.jpeg"
-        />
-        <ServiceModule
-          title="Emergency Callouts"
-          desc="24/7 emergency plumbing and heating service. Available for urgent repairs when you need us most."
-          tags={['24/7', 'Emergency', 'Urgent']}
-          image="https://images.pexels.com/photos/4792283/pexels-photo-4792283.jpeg"
+          title="Plumbing Repairs"
+          desc="Professional plumbing repair services for all types of issues. From minor drips to major water damage, we diagnose and fix problems quickly."
+          tags={['Repairs', 'Diagnostics', 'Water Damage']}
+          image="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg"
         />
         <ServiceModule
           title="General Plumbing Services"
           desc="Full range of plumbing services including renovations, new installations, and system upgrades."
           tags={['Renovations', 'Installations', 'Upgrades']}
           image="https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg"
+        />
+        <ServiceModule
+          title="Emergency Callouts"
+          desc="24/7 emergency plumbing and heating service. Available for urgent repairs when you need us most."
+          tags={['24/7', 'Emergency', 'Urgent']}
+          image="https://images.pexels.com/photos/4792283/pexels-photo-4792283.jpeg"
+          isWide
         />
       </div>
     </section>
