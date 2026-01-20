@@ -69,21 +69,18 @@ const Hero: React.FC = () => {
 
             <h1 className="flex flex-col items-center max-w-[95%] md:max-w-6xl mx-auto text-center">
               <span className="text-3xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black leading-[1.1] md:leading-[0.85] tracking-tight lg:tracking-[-0.05em] uppercase text-white px-2">
-                Rossendale's local
+                Plumbing and Heating Services
               </span>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-y-2 lg:gap-x-8 mt-2 lg:mt-6">
                 <span className="text-2xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-display font-bold text-blue-600 uppercase tracking-tighter">
-                  Plumbing & Heating
-                </span>
-                <span className="text-3xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black text-white uppercase tracking-tight lg:tracking-[-0.05em] italic">
-                  Engineer
+                  in Lancashire
                 </span>
               </div>
             </h1>
             
             <div className="max-w-2xl mx-auto space-y-6 pt-4 px-6 text-center">
               <p className="text-base sm:text-lg md:text-2xl text-gray-400 font-light leading-relaxed">
-                Professional, reliable service for your home or business. We handle everything from <span className="text-white font-semibold">boiler repairs</span> to luxury <span className="text-white font-semibold">bathroom installations</span>.
+                Professional expertise with <span className="text-white font-semibold">15+ years</span> of hands-on experience. All aspects of plumbing and heating work, <span className="text-white font-semibold">available 24/7 for emergencies</span>.
               </p>
             </div>
           </header>
