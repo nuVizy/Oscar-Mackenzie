@@ -116,18 +116,13 @@ const Services: React.FC = () => {
           desc="Professional plumbing repair services for all types of issues. From minor drips to major water damage, we diagnose and fix problems quickly."
           tags={['Repairs', 'Diagnostics', 'Water Damage']}
           image="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg"
+          isWide
         />
         <ServiceModule
           title="General Plumbing Services"
           desc="Full range of plumbing services including renovations, new installations, and system upgrades."
           tags={['Renovations', 'Installations', 'Upgrades']}
           image="https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg"
-        />
-        <ServiceModule
-          title="Emergency Callouts"
-          desc="24/7 emergency plumbing and heating service. Available for urgent repairs when you need us most."
-          tags={['24/7', 'Emergency', 'Urgent']}
-          image="https://images.pexels.com/photos/4792283/pexels-photo-4792283.jpeg"
           isWide
         />
       </div>
