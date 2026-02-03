@@ -54,7 +54,7 @@ const services = [
     title: "Heating Maintenance & Servicing",
     desc: "Regular boiler and heating system maintenance to ensure reliability. Extend the life of your system.",
     tags: ['Maintenance', 'Servicing', 'Reliability'],
-    image: "https://images.pexels.com/photos/8961157/pexels-photo-8961157.jpeg"
+    image: "https://images.pexels.com/photos/6530539/pexels-photo-6530539.jpeg"
   },
   {
     title: "Radiator Installation & Repair",
