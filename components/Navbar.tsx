@@ -47,29 +47,29 @@ const Navbar: React.FC = () => {
         
         {/* Navigation */}
         <div className="flex items-center space-x-4 md:space-x-12">
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="flex items-center space-x-4 lg:space-x-8">
             {navItems.map(item => (
-              <a 
-                key={item.name} 
+              <a
+                key={item.name}
                 href={`#${item.id}`}
                 onClick={(e) => handleNavClick(e, item.id)}
                 className="group flex flex-col items-center"
               >
-                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-gray-500 group-hover:text-orange-500 transition-colors">
+                <span className="text-[9px] font-black uppercase tracking-[0.2em] lg:tracking-[0.4em] text-gray-500 group-hover:text-orange-500 transition-colors">
                   {item.name}
                 </span>
                 <div className="w-0 h-[1px] bg-orange-500 mt-1 transition-all group-hover:w-full"></div>
               </a>
             ))}
           </div>
-          
-          <div className="flex items-center space-x-2 md:space-x-4">
+
+          <div className="hidden lg:flex items-center space-x-2 md:space-x-4">
             <div className="hidden sm:flex flex-col items-end mr-2 md:mr-4">
               <span className="text-[8px] font-mono text-gray-600 uppercase tracking-tighter">Emergency Call</span>
               <span className="text-[12px] md:text-[14px] font-bold text-white tracking-widest">07703 620023</span>
             </div>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => handleNavClick(e, 'contact')}
               className="h-10 md:h-14 px-4 md:px-8 bg-orange-600 text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] active:scale-95 flex items-center"
             >
