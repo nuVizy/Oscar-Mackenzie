@@ -26,96 +26,104 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-center justify-center pt-24 pb-12 px-6 md:px-12 overflow-hidden bg-black">
-      {/* Background Video Layer */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10 opacity-95"></div>
-        <div className="absolute inset-0 bg-black/60 z-10 md:bg-black/40"></div>
-        
-        <video 
+    <section id="home" className="relative min-h-[100svh] flex items-end md:items-center bg-zinc-950 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-transparent to-transparent z-10"></div>
+
+        <video
           ref={videoRef}
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
+          autoPlay
+          muted
+          loop
+          playsInline
           poster="https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          className="w-full h-full object-cover opacity-20 md:opacity-50 transition-opacity duration-1000 scale-[1.05]"
+          className="w-full h-full object-cover opacity-40"
           aria-hidden="true"
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-mechanical-parts-of-a-clock-close-up-4801-large.mp4" type="video/mp4" />
         </video>
       </div>
 
-      {/* Background Branding Large Text */}
-      <div className="absolute inset-0 z-[1] pointer-events-none flex items-center justify-center overflow-hidden">
-        <div className="text-[25vw] font-display font-black text-white/[0.01] select-none leading-none tracking-tighter uppercase whitespace-nowrap hidden lg:block translate-y-20">
-          MECHANICAL
-        </div>
-      </div>
-
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-        <div className="flex flex-col items-start space-y-8 md:space-y-16">
-
-          <header className="space-y-6 md:space-y-10 w-full">
-            <h1 className="flex flex-col items-start max-w-[95%] md:max-w-6xl text-left">
-              <span className="text-3xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black leading-[1.1] md:leading-[0.85] tracking-tight lg:tracking-[-0.05em] uppercase text-white px-2">
-                Plumbing and Heating Services
-              </span>
-              <div className="flex flex-col lg:flex-row items-start gap-y-2 lg:gap-x-8 mt-2 lg:mt-6">
-                <span className="text-2xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-display font-bold text-orange-600 uppercase tracking-tighter">
-                  in Lancashire
-                </span>
-              </div>
-            </h1>
-
-            <div className="max-w-2xl space-y-6 pt-4 px-6 text-left">
-              <p className="text-base sm:text-lg md:text-2xl text-gray-400 font-light leading-relaxed">
-                Professional expertise with <span className="text-white font-semibold">15+ years</span> of hands-on experience. All aspects of plumbing and heating work, <span className="text-white font-semibold">available 24/7 for emergencies</span>.
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pb-24 pt-32 md:py-0">
+        <div className="max-w-4xl">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <p className="text-orange-500 text-sm md:text-base font-semibold tracking-wide uppercase">
+                Lancashire's Trusted Experts
               </p>
-            </div>
-          </header>
 
-          {/* Call to Action Container */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 md:gap-12 pt-6 md:pt-4 w-full px-6">
-            <button 
-              onClick={handleScrollToContact}
-              className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-orange-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:shadow-[0_25px_60px_rgba(59,130,246,0.4)]"
-            >
-              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-              <div className="relative flex items-center space-x-4">
-                <span className="text-white group-hover:text-black text-[11px] md:text-[13px] font-black uppercase tracking-[0.3em] transition-colors duration-300">Book a Visit</span>
-                <svg className="w-5 h-5 text-white group-hover:text-black transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                Professional Plumbing
+                <span className="block text-orange-500">&amp; Heating Services</span>
+              </h1>
+            </div>
+
+            <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl">
+              Over 15 years of hands-on experience delivering reliable plumbing and heating solutions across Lancashire. Available 24/7 for emergencies.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                onClick={handleScrollToContact}
+                className="group inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-400 text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all duration-300"
+              >
+                <span>Get a Free Quote</span>
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
+              </button>
+
+              <a
+                href="tel:07703620023"
+                className="inline-flex items-center justify-center gap-3 border border-zinc-700 hover:border-zinc-500 text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all duration-300 hover:bg-white/5"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span>07703 620023</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-8 pt-8 border-t border-zinc-800">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">24/7 Emergency</p>
+                  <p className="text-zinc-500 text-xs">Fast response times</p>
+                </div>
               </div>
-            </button>
-            
-            <div className="flex flex-col items-center sm:items-start group">
-              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.4em] mb-1">Call Oscar Directly</span>
-              <a href="tel:07703620023" className="text-2xl md:text-3xl font-black text-white hover:text-orange-500 transition-colors tracking-tighter">07703 620023</a>
+
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">Fully Insured</p>
+                  <p className="text-zinc-500 text-xs">Peace of mind</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center space-y-4 opacity-40 hover:opacity-100 transition-opacity cursor-pointer group" 
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
         aria-label="Scroll to services"
       >
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/80 group-hover:text-orange-400 transition-colors">Discover Services</span>
-        <div className="relative w-[1px] h-16 bg-white/10 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-orange-500 animate-[scroll-down_3s_infinite_ease-in-out]"></div>
+        <span className="text-xs font-medium text-zinc-400 uppercase tracking-widest">Scroll</span>
+        <div className="w-5 h-8 border border-zinc-600 rounded-full flex justify-center pt-1.5">
+          <div className="w-1 h-2 bg-orange-500 rounded-full animate-bounce"></div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes scroll-down {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(200%); }
-        }
-      `}</style>
     </section>
   );
 };
