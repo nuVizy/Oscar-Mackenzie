@@ -26,13 +26,13 @@ const Contact: React.FC = () => {
                 </div>
               </a>
 
-              <a href="mailto:enquiries@omackenzieservices.co.uk" className="flex items-center justify-center lg:justify-start gap-6 group">
+              <a href="mailto:contact@omackenzieservices.co.uk" className="flex items-center justify-center lg:justify-start gap-6 group">
                 <div className="w-16 h-16 border border-white/10 flex items-center justify-center group-hover:border-orange-500 transition-colors flex-shrink-0">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <div className="text-left min-w-0">
                    <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest block mb-2">Send an Email</span>
-                   <span className="text-base md:text-lg font-black group-hover:text-orange-500 transition-colors tracking-tight block truncate">enquiries@omackenzieservices.co.uk</span>
+                   <span className="text-base md:text-lg font-black group-hover:text-orange-500 transition-colors tracking-tight block truncate">contact@omackenzieservices.co.uk</span>
                 </div>
               </a>
             </div>
