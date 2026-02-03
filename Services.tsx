@@ -82,7 +82,7 @@ const Services: React.FC = () => {
           title="Heating Solutions"
           desc="Efficient underfloor heating and system cleaning (power flushing) to make your radiators hotter and save you money on bills."
           tags={['Underfloor', 'Power Flush', 'Radiators']}
-          image="https://images.pexels.com/photos/2431653/pexels-photo-2431653.jpeg"
+          image="https://images.pexels.com/photos/6530539/pexels-photo-6530539.jpeg"
           isWide
         />
       </div>
