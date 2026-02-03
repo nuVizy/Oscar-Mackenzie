@@ -6,6 +6,11 @@ export default function ServerError() {
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black flex items-center justify-center px-4">
       <div className="text-center max-w-2xl">
         <div className="mb-8">
+          <img
+            src="/Logo/oscar_mackenzie_-_logo.png"
+            alt="O Mackenzie Logo"
+            className="h-16 w-auto mx-auto mb-8 brightness-0 invert opacity-60"
+          />
           <h1 className="text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 mb-4" style={{ fontFamily: 'Syncopate, sans-serif' }}>
             500
           </h1>

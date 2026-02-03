@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             >
               <div className="h-10 md:h-16 w-auto">
                 <img
-                  src="https://www.omackenzieservices.co.uk/oscar_mackenzie_-_logo.png"
+                  src="/Logo/oscar_mackenzie_-_logo.png"
                   alt="O Mackenzie Logo"
                   className="h-full w-auto object-contain brightness-0 invert"
                 />
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between p-6 border-b border-zinc-800">
             <div className="flex items-center gap-3">
               <img
-                src="https://www.omackenzieservices.co.uk/oscar_mackenzie_-_logo.png"
+                src="/Logo/oscar_mackenzie_-_logo.png"
                 alt="O Mackenzie Logo"
                 className="h-8 w-auto brightness-0 invert"
               />

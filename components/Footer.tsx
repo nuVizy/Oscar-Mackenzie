@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
       <div className="max-w-[1600px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           <div className="space-y-6 max-w-sm">
-            <img 
-              src="https://www.omackenzieservices.co.uk/oscar_mackenzie_-_logo.png" 
-              alt="O Mackenzie Logo" 
+            <img
+              src="/Logo/oscar_mackenzie_-_logo.png"
+              alt="O Mackenzie Logo"
               className="h-16 md:h-20 w-auto brightness-0 invert"
             />
             <p className="text-sm text-gray-500 leading-relaxed font-light">
