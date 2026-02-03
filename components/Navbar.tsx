@@ -70,10 +70,10 @@ const Navbar: React.FC = () => {
             <div className="flex items-center space-x-4">
               <div className="hidden sm:flex flex-col items-end mr-4">
                 <span className="text-[8px] font-mono text-gray-600 uppercase tracking-tighter">Emergency Call</span>
-                <span className="text-[12px] md:text-[14px] font-bold text-white tracking-widest">07703 620023</span>
+                <span className="text-[12px] md:text-[14px] font-bold text-white tracking-widest">+44 7356 080627</span>
               </div>
               <a
-                href="https://wa.me/447703620023"
+                href="https://wa.me/447356080627"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-10 md:h-14 px-4 md:px-8 bg-[#25D366] text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#20BA5A] transition-all shadow-[0_0_30px_rgba(37,211,102,0.3)] active:scale-95 flex items-center gap-2"
@@ -170,17 +170,17 @@ const Navbar: React.FC = () => {
           {/* CTAs */}
           <div className="p-6 space-y-4 border-t border-zinc-800 bg-zinc-900">
             <a
-              href="tel:07703620023"
+              href="tel:+447356080627"
               className="flex items-center justify-center gap-3 w-full bg-orange-500 hover:bg-orange-400 text-white px-6 py-4 text-sm font-semibold uppercase tracking-wide transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
               </svg>
-              <span>Call: 07703 620023</span>
+              <span>Call: +44 7356 080627</span>
             </a>
 
             <a
-              href="https://wa.me/447703620023"
+              href="https://wa.me/447356080627"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 w-full border-2 border-[#25D366] bg-[#25D366] hover:bg-[#20BA5A] hover:border-[#20BA5A] text-white px-6 py-4 text-sm font-semibold uppercase tracking-wide transition-all"
