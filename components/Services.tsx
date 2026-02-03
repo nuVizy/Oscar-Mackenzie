@@ -86,7 +86,7 @@ const services = [
     title: "Toilet Installation & Repair",
     desc: "Complete toilet services including repairs, replacements, and installations. Same-day fixes for common issues.",
     tags: ['Installation', 'Repair', 'Replacement'],
-    image: "https://images.pexels.com/photos/7031608/pexels-photo-7031608.jpeg"
+    image: "https://images.pexels.com/photos/3634742/pexels-photo-3634742.jpeg"
   },
   {
     title: "Leak Detection & Repair",
