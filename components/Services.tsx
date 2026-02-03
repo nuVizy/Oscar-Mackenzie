@@ -105,7 +105,7 @@ const services = [
     title: "General Plumbing Services",
     desc: "Full range of plumbing services including renovations, new installations, and system upgrades.",
     tags: ['Renovations', 'Installations', 'Upgrades'],
-    image: "https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg"
+    image: "https://images.pexels.com/photos/29226620/pexels-photo-29226620.jpeg"
   }
 ];
 
