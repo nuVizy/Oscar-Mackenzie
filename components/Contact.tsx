@@ -4,8 +4,8 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 md:py-32 px-6 md:px-12 bg-white/[0.01]">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
-          <div className="space-y-12 text-center lg:text-left">
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-12 text-center">
             <div className="space-y-4">
               <span className="text-orange-500 font-mono text-[10px] font-black tracking-widest uppercase block">GET IN TOUCH</span>
               <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">Contact Us</h2>
@@ -36,29 +36,6 @@ const Contact: React.FC = () => {
                 </div>
               </a>
             </div>
-          </div>
-
-          <div className="glass-panel p-6 md:p-16 space-y-6 md:space-y-8">
-            <h3 className="text-xl md:text-2xl font-display font-bold uppercase">Send a Message</h3>
-            <form className="space-y-4 md:space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div className="space-y-2">
-                  <label className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">Your Name</label>
-                  <input type="text" placeholder="John Doe" className="w-full bg-transparent border-b border-white/10 py-3 md:py-4 focus:outline-none focus:border-orange-500 text-sm placeholder:text-gray-800" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">Phone Number</label>
-                  <input type="tel" placeholder="07xxx xxxxxx" className="w-full bg-transparent border-b border-white/10 py-3 md:py-4 focus:outline-none focus:border-orange-500 text-sm placeholder:text-gray-800" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-[10px] font-mono text-gray-600 uppercase tracking-widest">How can we help?</label>
-                <textarea placeholder="Tell us about your project or repair..." className="w-full bg-transparent border-b border-white/10 py-3 md:py-4 focus:outline-none focus:border-orange-500 text-sm resize-none h-24 md:h-32 placeholder:text-gray-800"></textarea>
-              </div>
-              <button className="w-full py-5 md:py-6 bg-white text-black text-[11px] md:text-xs font-black uppercase tracking-[0.4em] hover:bg-orange-600 hover:text-white transition-all active:scale-95 shadow-xl">
-                Get Your Free Quote
-              </button>
-            </form>
           </div>
         </div>
       </div>
