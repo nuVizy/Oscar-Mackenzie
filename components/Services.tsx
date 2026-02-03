@@ -92,7 +92,7 @@ const services = [
     title: "Leak Detection & Repair",
     desc: "Expert leak detection and repair services to prevent water damage and save on your bills. We find hidden leaks fast.",
     tags: ['Detection', 'Repair', 'Prevention'],
-    image: "https://images.pexels.com/photos/7195133/pexels-photo-7195133.jpeg",
+    image: "https://images.pexels.com/photos/15206136/pexels-photo-15206136.jpeg",
     isWide: true
   },
   {
