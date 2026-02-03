@@ -60,7 +60,7 @@ const services = [
     title: "Radiator Installation & Repair",
     desc: "Central heating radiator installation, repair, and maintenance. Keep your home warm and efficient.",
     tags: ['Installation', 'Repair', 'Maintenance'],
-    image: "https://images.pexels.com/photos/6530539/pexels-photo-6530539.jpeg"
+    image: "https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg"
   },
   {
     title: "Heating Solutions",
