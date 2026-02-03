@@ -7,7 +7,7 @@ const ServiceModule: React.FC<{
   image: string;
   isWide?: boolean;
 }> = ({ title, desc, tags, image, isWide }) => (
-  <div className={`glass-card group relative overflow-hidden p-6 md:p-12 rounded-xl ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'}`}>
+  <div className={`group relative overflow-hidden border border-white/5 bg-black p-6 md:p-12 hover:border-orange-500/50 transition-all duration-500 ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'}`}>
     <div className="relative z-10 space-y-6 md:space-y-8 h-full flex flex-col justify-between">
       <div className="space-y-4 md:space-y-6">
         <h3 className="text-2xl md:text-4xl font-display font-black uppercase tracking-tighter leading-tight group-hover:text-orange-500 transition-colors">
@@ -21,13 +21,13 @@ const ServiceModule: React.FC<{
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap gap-2">
           {tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-full text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-orange-400 group-hover:border-orange-500/30 transition-colors">
+            <span key={tag} className="px-3 py-1 bg-white/[0.03] border border-white/5 text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-orange-400 transition-colors">
               {tag}
             </span>
           ))}
         </div>
-
-        <div className="aspect-[16/9] overflow-hidden bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg">
+        
+        <div className="aspect-[16/9] overflow-hidden bg-gray-900 border border-white/5">
           <img 
             src={image} 
             alt={title} 

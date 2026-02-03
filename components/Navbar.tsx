@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-4 md:py-8 pointer-events-none">
-      <div className="glass-panel max-w-[1600px] mx-auto flex items-center justify-between pointer-events-auto rounded-none md:rounded-2xl shadow-lg px-4 md:px-8 py-3 md:py-4">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between pointer-events-auto">
         {/* Brand Logo */}
         <div className="flex items-center space-x-3 md:space-x-6">
           <button 
@@ -68,10 +68,10 @@ const Navbar: React.FC = () => {
               <span className="text-[8px] font-mono text-gray-600 uppercase tracking-tighter">Emergency Call</span>
               <span className="text-[12px] md:text-[14px] font-bold text-white tracking-widest">07703 620023</span>
             </div>
-            <a
-              href="#contact"
+            <a 
+              href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
-              className="h-10 md:h-14 px-4 md:px-8 bg-orange-600 text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(255,140,0,0.3)] hover:shadow-[0_0_40px_rgba(255,140,0,0.5)] active:scale-95 flex items-center rounded-lg"
+              className="h-10 md:h-14 px-4 md:px-8 bg-orange-600 text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] active:scale-95 flex items-center"
             >
               Get A Quote
             </a>

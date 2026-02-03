@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           
           <header className="space-y-6 md:space-y-10 w-full">
             <div className="flex justify-center">
-              <div className="glass-card inline-flex items-center space-x-3 px-6 py-2 rounded-full mb-2">
+              <div className="inline-flex items-center space-x-3 px-6 py-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-full mb-2">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
@@ -87,9 +87,9 @@ const Hero: React.FC = () => {
 
           {/* Call to Action Container */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 pt-6 md:pt-4 w-full px-6">
-            <button
+            <button 
               onClick={handleScrollToContact}
-              className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-orange-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(255,140,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,140,0,0.5)] rounded-xl"
+              className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-orange-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:shadow-[0_25px_60px_rgba(59,130,246,0.4)]"
             >
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
               <div className="relative flex items-center space-x-4">
