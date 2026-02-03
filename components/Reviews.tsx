@@ -53,7 +53,7 @@ const Reviews: React.FC = () => {
           <div className="lg:col-span-8 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {reviews.map((rev, i) => (
-                <div key={i} className="p-8 md:p-10 bg-black border border-white/5 group hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden">
+                <div key={i} className="glass-card p-8 md:p-10 group relative overflow-hidden rounded-xl">
                   <div className="absolute top-0 left-0 w-1 h-0 bg-orange-500 group-hover:h-full transition-all duration-500"></div>
                   
                   <div className="flex justify-between items-start mb-6">
@@ -76,11 +76,11 @@ const Reviews: React.FC = () => {
             </div>
             
             <div className="pt-8 flex justify-center lg:justify-end">
-              <a 
-                href="https://www.google.com/search?q=O+Mackenzie+Services+Rossendale+reviews" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/search?q=O+Mackenzie+Services+Rossendale+reviews"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-4 px-8 py-4 border border-white/10 hover:border-orange-500 text-[10px] font-black uppercase tracking-widest transition-all group"
+                className="glass-button inline-flex items-center space-x-4 px-8 py-4 text-[10px] font-black uppercase tracking-widest rounded-full group"
               >
                 <span>Read More on Google</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

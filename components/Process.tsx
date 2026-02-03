@@ -14,9 +14,9 @@ const Process: React.FC = () => {
          <span className="text-orange-500 font-mono text-[10px] font-black tracking-widest uppercase block mb-4">How We Work</span>
          <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">Simple & Reliable</h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {steps.map((step) => (
-          <div key={step.num} className="bg-black p-8 md:p-10 space-y-8 group hover:bg-white/[0.02] transition-colors relative overflow-hidden">
+          <div key={step.num} className="glass-card p-8 md:p-10 space-y-8 group relative overflow-hidden rounded-xl">
             <div className="absolute -right-4 -bottom-4 text-7xl md:text-[8rem] font-black text-white/[0.02] group-hover:text-orange-500/[0.05] transition-colors leading-none select-none">
               {step.num}
             </div>

@@ -23,7 +23,7 @@ const Tips: React.FC = () => {
           
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6">
             {tips.map((tip, i) => (
-              <div key={i} className="p-8 bg-black/20 backdrop-blur-md border border-white/10 space-y-4 group hover:bg-black/30 transition-colors">
+              <div key={i} className="p-8 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl space-y-4 group hover:bg-black/30 hover:border-white/30 transition-all">
                 <span className="text-[10px] font-mono text-white/40 font-bold tracking-widest">TIP 0{i+1}</span>
                 <h4 className="text-lg font-black uppercase text-white tracking-tight">{tip.title}</h4>
                 <p className="text-sm text-white/70 leading-relaxed font-light">{tip.desc}</p>
