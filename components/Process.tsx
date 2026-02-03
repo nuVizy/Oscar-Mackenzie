@@ -30,10 +30,20 @@ const Process: React.FC = () => {
       </div>
 
       {/* Mobile: Horizontal scroll with snap */}
-      <div className="lg:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-6 scrollbar-hide">
-        {steps.map((step) => (
-          <StepCard key={step.num} {...step} />
-        ))}
+      <div className="lg:hidden relative">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-6 scrollbar-hide">
+          {steps.map((step) => (
+            <StepCard key={step.num} {...step} />
+          ))}
+        </div>
+        <div className="absolute right-0 top-0 bottom-4 w-24 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none flex items-center justify-end pr-4">
+          <div className="flex items-center gap-2 text-orange-500/60">
+            <span className="text-[10px] font-mono font-bold tracking-widest">SWIPE</span>
+            <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Desktop: Grid layout */}
