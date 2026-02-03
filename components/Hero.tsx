@@ -54,31 +54,21 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-        <div className="flex flex-col items-center space-y-8 md:space-y-16">
-          
-          <header className="space-y-6 md:space-y-10 w-full">
-            <div className="flex justify-center">
-              <div className="inline-flex items-center space-x-3 px-6 py-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-full mb-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                </span>
-                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Available in Rossendale</span>
-              </div>
-            </div>
+        <div className="flex flex-col items-start space-y-8 md:space-y-16">
 
-            <h1 className="flex flex-col items-center max-w-[95%] md:max-w-6xl mx-auto text-center">
+          <header className="space-y-6 md:space-y-10 w-full">
+            <h1 className="flex flex-col items-start max-w-[95%] md:max-w-6xl text-left">
               <span className="text-3xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-display font-black leading-[1.1] md:leading-[0.85] tracking-tight lg:tracking-[-0.05em] uppercase text-white px-2">
                 Plumbing and Heating Services
               </span>
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-y-2 lg:gap-x-8 mt-2 lg:mt-6">
+              <div className="flex flex-col lg:flex-row items-start gap-y-2 lg:gap-x-8 mt-2 lg:mt-6">
                 <span className="text-2xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-display font-bold text-orange-600 uppercase tracking-tighter">
                   in Lancashire
                 </span>
               </div>
             </h1>
-            
-            <div className="max-w-2xl mx-auto space-y-6 pt-4 px-6 text-center">
+
+            <div className="max-w-2xl space-y-6 pt-4 px-6 text-left">
               <p className="text-base sm:text-lg md:text-2xl text-gray-400 font-light leading-relaxed">
                 Professional expertise with <span className="text-white font-semibold">15+ years</span> of hands-on experience. All aspects of plumbing and heating work, <span className="text-white font-semibold">available 24/7 for emergencies</span>.
               </p>
@@ -86,7 +76,7 @@ const Hero: React.FC = () => {
           </header>
 
           {/* Call to Action Container */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 pt-6 md:pt-4 w-full px-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 md:gap-12 pt-6 md:pt-4 w-full px-6">
             <button 
               onClick={handleScrollToContact}
               className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-orange-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:shadow-[0_25px_60px_rgba(59,130,246,0.4)]"
