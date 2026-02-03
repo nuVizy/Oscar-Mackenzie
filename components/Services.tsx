@@ -7,10 +7,10 @@ const ServiceModule: React.FC<{
   image: string;
   isWide?: boolean;
 }> = ({ title, desc, tags, image, isWide }) => (
-  <div className={`group relative overflow-hidden border border-white/5 bg-black p-6 md:p-12 hover:border-blue-500/50 transition-all duration-500 ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'}`}>
+  <div className={`group relative overflow-hidden border border-white/5 bg-black p-6 md:p-12 hover:border-orange-500/50 transition-all duration-500 ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'}`}>
     <div className="relative z-10 space-y-6 md:space-y-8 h-full flex flex-col justify-between">
       <div className="space-y-4 md:space-y-6">
-        <h3 className="text-2xl md:text-4xl font-display font-black uppercase tracking-tighter leading-tight group-hover:text-blue-500 transition-colors">
+        <h3 className="text-2xl md:text-4xl font-display font-black uppercase tracking-tighter leading-tight group-hover:text-orange-500 transition-colors">
           {title}
         </h3>
         <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">
@@ -21,7 +21,7 @@ const ServiceModule: React.FC<{
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap gap-2">
           {tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-white/[0.03] border border-white/5 text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-blue-400 transition-colors">
+            <span key={tag} className="px-3 py-1 bg-white/[0.03] border border-white/5 text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-orange-400 transition-colors">
               {tag}
             </span>
           ))}
@@ -48,8 +48,8 @@ const Services: React.FC = () => {
       <div className="mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8">
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
-            <span className="text-blue-500 font-mono text-xs font-bold">OUR SERVICES</span>
-            <div className="h-px w-20 bg-blue-500/30"></div>
+            <span className="text-orange-500 font-mono text-xs font-bold">OUR SERVICES</span>
+            <div className="h-px w-20 bg-orange-500/30"></div>
           </div>
           <h2 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter">What We Do</h2>
         </div>

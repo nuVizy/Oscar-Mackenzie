@@ -30,12 +30,12 @@ const Reviews: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20">
           <div className="lg:col-span-4 space-y-8 md:space-y-12 text-center lg:text-left">
             <div className="space-y-4">
-              <span className="text-blue-500 font-mono text-[10px] md:text-xs font-bold uppercase tracking-widest block">Customer Testimonials</span>
+              <span className="text-orange-500 font-mono text-[10px] md:text-xs font-bold uppercase tracking-widest block">Customer Testimonials</span>
               <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter leading-none italic">Verified Reviews</h2>
             </div>
             
             <div className="flex flex-col items-center lg:items-start space-y-4">
-              <div className="flex text-blue-500">
+              <div className="flex text-orange-500">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -53,13 +53,13 @@ const Reviews: React.FC = () => {
           <div className="lg:col-span-8 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {reviews.map((rev, i) => (
-                <div key={i} className="p-8 md:p-10 bg-black border border-white/5 group hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-1 h-0 bg-blue-500 group-hover:h-full transition-all duration-500"></div>
+                <div key={i} className="p-8 md:p-10 bg-black border border-white/5 group hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-0 bg-orange-500 group-hover:h-full transition-all duration-500"></div>
                   
                   <div className="flex justify-between items-start mb-6">
                     <div className="space-y-1">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover:text-blue-500 transition-colors">{rev.name}</span>
-                      <div className="flex text-blue-500/50 scale-75 origin-left">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover:text-orange-500 transition-colors">{rev.name}</span>
+                      <div className="flex text-orange-500/50 scale-75 origin-left">
                         {[...Array(5)].map((_, starI) => (
                           <svg key={starI} className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         ))}
@@ -80,7 +80,7 @@ const Reviews: React.FC = () => {
                 href="https://www.google.com/search?q=O+Mackenzie+Services+Rossendale+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-4 px-8 py-4 border border-white/10 hover:border-blue-500 text-[10px] font-black uppercase tracking-widest transition-all group"
+                className="inline-flex items-center space-x-4 px-8 py-4 border border-white/10 hover:border-orange-500 text-[10px] font-black uppercase tracking-widest transition-all group"
               >
                 <span>Read More on Google</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

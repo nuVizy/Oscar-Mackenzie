@@ -55,10 +55,10 @@ const Navbar: React.FC = () => {
                 onClick={(e) => handleNavClick(e, item.id)}
                 className="group flex flex-col items-center"
               >
-                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-gray-500 group-hover:text-blue-500 transition-colors">
+                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-gray-500 group-hover:text-orange-500 transition-colors">
                   {item.name}
                 </span>
-                <div className="w-0 h-[1px] bg-blue-500 mt-1 transition-all group-hover:w-full"></div>
+                <div className="w-0 h-[1px] bg-orange-500 mt-1 transition-all group-hover:w-full"></div>
               </a>
             ))}
           </div>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
-              className="h-10 md:h-14 px-4 md:px-8 bg-blue-600 text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] active:scale-95 flex items-center"
+              className="h-10 md:h-14 px-4 md:px-8 bg-orange-600 text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] active:scale-95 flex items-center"
             >
               Get A Quote
             </a>

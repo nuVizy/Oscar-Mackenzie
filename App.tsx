@@ -11,11 +11,11 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-[#050505] selection:bg-blue-600 selection:text-white">
+    <div className="relative min-h-screen bg-[#050505] selection:bg-orange-500 selection:text-white">
       {/* Global Background Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[20%] right-[10%] w-[40vw] h-[40vw] bg-blue-600/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[20%] left-[5%] w-[30vw] h-[30vw] bg-blue-900/5 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[20%] right-[10%] w-[40vw] h-[40vw] bg-orange-600/5 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[20%] left-[5%] w-[30vw] h-[30vw] bg-orange-900/5 rounded-full blur-[100px]"></div>
         {/* Continuous Grid */}
         <div className="absolute inset-0 border-x border-white/[0.03] mx-auto max-w-[1600px]"></div>
       </div>

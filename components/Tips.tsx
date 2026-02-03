@@ -8,7 +8,7 @@ const Tips: React.FC = () => {
   ];
 
   return (
-    <section id="tips" className="bg-blue-600 py-20 md:py-32 px-6 md:px-12 relative overflow-hidden">
+    <section id="tips" className="bg-orange-600 py-20 md:py-32 px-6 md:px-12 relative overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <div className="text-[15rem] md:text-[20rem] font-black text-black select-none leading-none tracking-tighter uppercase absolute -bottom-20 -left-20">SAVE</div>

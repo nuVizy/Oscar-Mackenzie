@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 text-[10px] font-mono font-bold tracking-[0.2em] uppercase">
             <div className="space-y-4">
-              <p className="text-blue-500">Links</p>
+              <p className="text-orange-500">Links</p>
               <div className="flex flex-col space-y-3">
                 <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="hover:text-white text-gray-600 transition-colors">Home</a>
                 <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-white text-gray-600 transition-colors">Services</a>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <p className="text-blue-500">Service</p>
+              <p className="text-orange-500">Service</p>
               <div className="flex flex-col space-y-3">
                 <a href="#areas" onClick={(e) => handleScroll(e, 'areas')} className="hover:text-white text-gray-600 transition-colors">Areas Covered</a>
                 <a href="#tips" onClick={(e) => handleScroll(e, 'tips')} className="hover:text-white text-gray-600 transition-colors">Helpful Tips</a>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <p className="text-blue-500">Trust</p>
+              <p className="text-orange-500">Trust</p>
               <div className="flex flex-col space-y-3">
                 <span className="text-gray-600">Gas Safe: 583167</span>
                 <span className="text-gray-600">Rossendale Local</span>

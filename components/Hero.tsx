@@ -60,8 +60,8 @@ const Hero: React.FC = () => {
             <div className="flex justify-center">
               <div className="inline-flex items-center space-x-3 px-6 py-2 border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-full mb-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Available in Rossendale</span>
               </div>
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                 Plumbing and Heating Services
               </span>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-y-2 lg:gap-x-8 mt-2 lg:mt-6">
-                <span className="text-2xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-display font-bold text-blue-600 uppercase tracking-tighter">
+                <span className="text-2xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-display font-bold text-orange-600 uppercase tracking-tighter">
                   in Lancashire
                 </span>
               </div>
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-12 pt-6 md:pt-4 w-full px-6">
             <button 
               onClick={handleScrollToContact}
-              className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-blue-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:shadow-[0_25px_60px_rgba(59,130,246,0.4)]"
+              className="group relative w-full sm:w-auto h-16 md:h-20 px-10 md:px-16 bg-orange-600 flex items-center justify-center overflow-hidden transition-all active:scale-95 shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:shadow-[0_25px_60px_rgba(59,130,246,0.4)]"
             >
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
               <div className="relative flex items-center space-x-4">
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-col items-center sm:items-start group">
               <span className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.4em] mb-1">Call Oscar Directly</span>
-              <a href="tel:07703620023" className="text-2xl md:text-3xl font-black text-white hover:text-blue-500 transition-colors tracking-tighter">07703 620023</a>
+              <a href="tel:07703620023" className="text-2xl md:text-3xl font-black text-white hover:text-orange-500 transition-colors tracking-tighter">07703 620023</a>
             </div>
           </div>
         </div>
@@ -114,9 +114,9 @@ const Hero: React.FC = () => {
         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
         aria-label="Scroll to services"
       >
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/80 group-hover:text-blue-400 transition-colors">Discover Services</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/80 group-hover:text-orange-400 transition-colors">Discover Services</span>
         <div className="relative w-[1px] h-16 bg-white/10 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-blue-500 animate-[scroll-down_3s_infinite_ease-in-out]"></div>
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-orange-500 animate-[scroll-down_3s_infinite_ease-in-out]"></div>
         </div>
       </div>
 
