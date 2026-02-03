@@ -24,6 +24,27 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.omackenzieservices.co.uk/" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/oscar_mackenzie_-_logo.png">
+    <link rel="apple-touch-icon" href="/oscar_mackenzie_-_logo.png">
+
+    <!-- PWA & Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff8c00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="O Mackenzie">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="O Mackenzie Plumbing & Heating">
+    <meta name="language" content="English">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
     <!-- Structured Data (JSON-LD) for Local Business SEO -->
     <script type="application/ld+json">
     {
@@ -60,7 +81,48 @@
         "opens": "08:00",
         "closes": "18:00"
       },
-      "sameAs": []
+      "sameAs": [],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rossendale"
+        },
+        {
+          "@type": "City",
+          "name": "Burnley"
+        },
+        {
+          "@type": "City",
+          "name": "Rawtenstall"
+        },
+        {
+          "@type": "Region",
+          "name": "Lancashire"
+        }
+      ],
+      "knowsAbout": [
+        "Plumbing Services",
+        "Heating Systems",
+        "Boiler Repairs",
+        "Bathroom Installation",
+        "Gas Safe Registered"
+      ]
+    }
+    </script>
+
+    <!-- Additional Schema for Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.omackenzieservices.co.uk/"
+        }
+      ]
     }
     </script>
 

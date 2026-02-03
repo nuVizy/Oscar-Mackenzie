@@ -1,0 +1,33 @@
+{
+  "name": "O Mackenzie Plumbing & Heating",
+  "short_name": "O Mackenzie",
+  "description": "Professional plumbing and heating services in Rossendale and the North West",
+  "start_url": "https://www.omackenzieservices.co.uk/",
+  "scope": "https://www.omackenzieservices.co.uk/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff8c00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/oscar_mackenzie_-_logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/oscar_mackenzie_-_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "service"],
+  "screenshots": [
+    {
+      "src": "/oscar_mackenzie_-_logo.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}
