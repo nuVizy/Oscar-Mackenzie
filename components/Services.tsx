@@ -80,7 +80,7 @@ const services = [
     title: "Tap & Fitting Replacements",
     desc: "Modern tap and fitting replacements to update your kitchen or bathroom. We install quality fixtures that last.",
     tags: ['Taps', 'Fittings', 'Installation'],
-    image: "https://images.pexels.com/photos/7061662/pexels-photo-7061662.jpeg"
+    image: "https://images.pexels.com/photos/5710332/pexels-photo-5710332.jpeg"
   },
   {
     title: "Toilet Installation & Repair",
