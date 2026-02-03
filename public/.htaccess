@@ -34,18 +34,85 @@
 # HTTP security headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
-    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Frame-Options "DENY"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://generativelanguage.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://generativelanguage.googleapis.com https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+    Header always set X-Robots-Tag "index, follow"
 </IfModule>
 
-# Redirect HTTP to HTTPS
+# Block access to sensitive files
+<FilesMatch "^\.(.htaccess|htpasswd|env|git|gitignore|DS_Store)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(log|md|json|lock|yml|yaml|config|bak|sql|sh|bash)$">
+    Require all denied
+</FilesMatch>
+
+# Block bad bots and scrapers
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Block empty or malformed user agents
+    RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^(-|.{0,3})$ [OR]
+
+    # Block common spam/malicious bots
+    RewriteCond %{HTTP_USER_AGENT} (ahrefs|semrush|majestic|mj12bot|wget|curl|scrapy|python-requests|java|httpclient|winhttp|libwww-perl|harvest|extract|scanner|grabber|collector|email|sucker|ninja|crescent|microsoft.url|scan|acunetix|zmeu) [NC,OR]
+
+    # Block known bad referrers
+    RewriteCond %{HTTP_REFERER} (poker|casino|viagra|cialis|levitra|adult|porn|xxx|buy-cheap|make-money) [NC,OR]
+
+    # Block SQL injection attempts
+    RewriteCond %{QUERY_STRING} (union.*select|insert.*into|drop.*table|exec.*xp_|select.*from) [NC,OR]
+
+    # Block XSS attempts
+    RewriteCond %{QUERY_STRING} (<script|javascript:|eval\(|base64_decode|gzip|document\.cookie) [NC,OR]
+
+    # Block file injection attempts
+    RewriteCond %{QUERY_STRING} (\.\./|\.\.\\|etc/passwd|proc/self/environ) [NC,OR]
+
+    # Block suspicious query strings
+    RewriteCond %{QUERY_STRING} (mosConfig|_REQUEST|globals|GLOBALS|config\.) [NC]
+
+    RewriteRule .* - [F,L]
+
+    # Prevent hotlinking
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?omackenzieservices\.co\.uk [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|webp|svg|mp4|pdf)$ - [F,L]
+
+    # Redirect HTTP to HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Redirect www to non-www
     RewriteCond %{HTTP_HOST} ^www\.omackenzieservices\.co\.uk$ [NC]
     RewriteRule ^(.*)$ https://omackenzieservices.co.uk/$1 [L,R=301]
+
+    # Handle React Router - redirect all requests to index.html
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
 </IfModule>
+
+# Rate limiting via mod_evasive (if available)
+<IfModule mod_evasive20.c>
+    DOSHashTableSize 3097
+    DOSPageCount 10
+    DOSSiteCount 100
+    DOSPageInterval 1
+    DOSSiteInterval 1
+    DOSBlockingPeriod 60
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Disable server signature
+ServerSignature Off
