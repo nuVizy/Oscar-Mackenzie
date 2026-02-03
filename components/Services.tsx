@@ -47,7 +47,7 @@ const services = [
     title: "Boiler Services",
     desc: "Expert installation and yearly servicing to keep your home warm. We are Gas Safe registered and specialists in Worcester Bosch and Ideal systems.",
     tags: ['Installation', 'Repair', 'Servicing'],
-    image: "https://images.pexels.com/photos/15206136/pexels-photo-15206136.jpeg",
+    image: "https://images.pexels.com/photos/6530539/pexels-photo-6530539.jpeg",
     isWide: true
   },
   {
