@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const ServiceCard: React.FC<{
   title: string;
@@ -6,14 +6,15 @@ const ServiceCard: React.FC<{
   tags: string[];
   image: string;
   isWide?: boolean;
-}> = ({ title, desc, tags, image, isWide }) => (
-  <div className={`group relative overflow-hidden border border-white/5 bg-black p-6 md:p-12 hover:border-orange-500/50 transition-all duration-500 flex-shrink-0 w-[85vw] snap-start lg:w-auto lg:flex-shrink ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'}`}>
-    <div className="relative z-10 space-y-6 md:space-y-8 h-full flex flex-col justify-between">
-      <div className="space-y-4 md:space-y-6">
-        <h3 className="text-2xl md:text-4xl font-display font-black uppercase tracking-tighter leading-tight group-hover:text-orange-500 transition-colors">
+  index: number;
+}> = ({ title, desc, tags, image, isWide, index }) => (
+  <div className={`group relative overflow-hidden border border-white/5 bg-black p-6 md:p-10 lg:p-12 hover:border-orange-500/50 transition-all duration-500 flex-shrink-0 w-[85vw] snap-start lg:w-auto lg:flex-shrink ${isWide ? 'lg:col-span-2' : 'lg:col-span-1'} animate-on-scroll animate-fade-in-up`} style={{ animationDelay: `${index * 0.1}s` }}>
+    <div className="relative z-10 space-y-5 sm:space-y-6 md:space-y-8 h-full flex flex-col justify-between">
+      <div className="space-y-3 sm:space-y-4 md:space-y-6">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-black uppercase tracking-tighter leading-tight group-hover:text-orange-500 transition-colors">
           {title}
         </h3>
-        <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light">
+        <p className="text-xs sm:text-sm md:text-base text-gray-400 leading-relaxed font-light">
           {desc}
         </p>
       </div>
@@ -21,7 +22,7 @@ const ServiceCard: React.FC<{
       <div className="space-y-4 md:space-y-6">
         <div className="flex flex-wrap gap-2">
           {tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-white/[0.03] border border-white/5 text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-orange-400 transition-colors">
+            <span key={tag} className="px-2.5 py-1 bg-white/[0.03] border border-white/5 text-[8px] md:text-[9px] font-black tracking-widest uppercase text-gray-500 group-hover:text-orange-400 transition-colors">
               {tag}
             </span>
           ))}
@@ -110,43 +111,63 @@ const services = [
 ];
 
 const Services: React.FC = () => {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="services" className="py-20 md:py-32 max-w-[1600px] mx-auto">
-      <div className="mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 px-6 md:px-12">
-        <div className="space-y-4">
-          <div className="flex items-center space-x-4">
-            <span className="text-orange-500 font-mono text-xs font-bold">OUR SERVICES</span>
-            <div className="h-px w-20 bg-orange-500/30"></div>
+    <section id="services" className="py-16 sm:py-20 md:py-28 lg:py-32 max-w-[1600px] mx-auto">
+      <div className="mb-10 sm:mb-12 md:mb-16 lg:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-12">
+        <div className="space-y-3 sm:space-y-4 animate-on-scroll animate-fade-in-up">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <span className="text-orange-500 font-mono text-[10px] sm:text-xs font-bold tracking-wider">OUR SERVICES</span>
+            <div className="h-px w-16 sm:w-20 bg-orange-500/30"></div>
           </div>
-          <h2 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter">What We Do</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black uppercase tracking-tighter">What We Do</h2>
         </div>
-        <p className="text-sm md:text-base text-gray-500 max-w-sm">
+        <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-sm animate-on-scroll animate-fade-in-up delay-200">
           High-quality plumbing and heating for every part of your home.
         </p>
       </div>
 
       {/* Mobile: Horizontal scroll with snap */}
       <div className="lg:hidden">
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-6 scrollbar-hide">
+        <div className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-4 sm:px-6 scrollbar-hide">
           {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <ServiceCard key={index} {...service} index={index} />
           ))}
         </div>
         <div className="flex items-center justify-center gap-2 text-orange-500/60 mt-4">
-          <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          <span className="text-[10px] font-mono font-bold tracking-widest">SWIPE TO EXPLORE</span>
-          <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-widest">SWIPE TO EXPLORE</span>
+          <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>
 
       {/* Desktop: Grid layout */}
-      <div className="hidden lg:grid grid-cols-3 gap-6 px-12">
+      <div className="hidden lg:grid grid-cols-3 gap-5 lg:gap-6 px-8 lg:px-12">
         {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
+          <ServiceCard key={index} {...service} index={index} />
         ))}
       </div>
     </section>
