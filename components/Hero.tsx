@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-end md:items-center bg-zinc-950 overflow-hidden">
+    <section id="home" className="relative min-h-[calc(100svh-88px)] md:min-h-[calc(100svh-104px)] flex items-end md:items-center bg-zinc-950 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-transparent to-transparent z-10"></div>
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         </video>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pb-20 sm:pb-24 pt-28 sm:pt-32 md:py-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 py-16 sm:py-20 md:py-24">
         <div className="max-w-4xl">
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-3 sm:space-y-4 animate-fade-in-up">
