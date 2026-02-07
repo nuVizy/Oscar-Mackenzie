@@ -29,7 +29,7 @@ const App: React.FC = () => {
               element={
                 <>
                   <Navbar />
-                  <div className="pt-[88px] md:pt-[104px]">
+                  <div className="pt-[72px] md:pt-[112px]">
                     <Home />
                     <Footer />
                   </div>
